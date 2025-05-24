@@ -29,7 +29,7 @@
         <div class="playhead" :style="{ left: playheadPercent + '%' }"></div>
       </div>
       <p class="percentage-display">
-        ✅ Unique Watch Time: <strong>{{ watchedPercentage.toFixed(2) }}%</strong>
+        ✅ Watch Progress: <strong>{{ watchedPercentage.toFixed(2) }}%</strong>
       </p>
     </div>
   </div>
@@ -75,7 +75,7 @@ export default {
     },
   },
   mounted(){
-  localStorage.removeItem(this.storageKey)
+  // localStorage.removeItem(this.storageKey)
   },
   methods: {
     initTracking() {

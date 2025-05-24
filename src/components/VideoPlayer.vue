@@ -29,7 +29,7 @@
         <div class="playhead" :style="{ left: playheadPercent + '%' }"></div>
       </div>
       <p class="percentage-display">
-        ✅ Watch Progress: <strong>{{ watchedPercentage.toFixed(2) }}%</strong>
+        ✅ Watch Progress: <strong>{{ watchedPercentage.toFixed() }}%</strong>
       </p>
     </div>
   </div>

@@ -1,5 +1,14 @@
-# Vue 3 + Vite
+# Video Player
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This video player component is designed in such a way to track users watch progress exactly.This means if a user fast forwards the video or rewinds and watches again that wont doesnt effect his progress.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+The true progress is only counted if he truly watches the entire video and there are no shortcuts to skip the video with 100% progress
+
+How the logic works:
+ The entire video is divided into segments. The number of segments are based on the duration of the video.
+
+ When ever the user watches the a segment it is marked as completed and to acheive 100% progress he needs to watch all the segments.
+
+ If the user fast forwards and watches future segments then the progress increases but he will not acheive a 100% as he skipped some segments.
+
+ If he rewinds since they are already marked watched so the logic doesn't count that as progress.
